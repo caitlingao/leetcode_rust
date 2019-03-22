@@ -1,0 +1,8 @@
+[package]
+name = "leetcode_rust"
+version = "0.1.0"
+authors = ["Caitlin Gao <caitlin.gaoo@google.com>"]
+description = "leetcode_rust"
+edition = "2018"
+
+[dependencies]
