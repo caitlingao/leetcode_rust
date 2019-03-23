@@ -2,8 +2,22 @@
 name = "leetcode_for_rust"
 version = "0.1.0"
 authors = ["Caitlin Gao <caitlin.gaoo@google.com>"]
+homepage = "https://github.com/caitlingao/leetcode_rust"
+repository = "https://github.com/caitlingao/leetcode_rust"
 description = "leetcode for rust"
 license = "MIT"
 edition = "2018"
+
+include = [
+    "Cargo.toml",
+    "LICENSE",
+    "README.md",
+    "src/lib.rs",
+    "src/two_sum/mod.rs",
+]
+
+[lib]
+name = "leetcode_for_rust"
+crate-type = ["rlib", "staticlib"]
 
 [dependencies]
