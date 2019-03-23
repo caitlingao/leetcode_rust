@@ -1,8 +1,9 @@
 [package]
-name = "leetcode_rust"
+name = "leetcode_for_rust"
 version = "0.1.0"
 authors = ["Caitlin Gao <caitlin.gaoo@google.com>"]
-description = "leetcode_rust"
+description = "leetcode for rust"
+license = "MIT"
 edition = "2018"
 
 [dependencies]
