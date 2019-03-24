@@ -1,6 +1,6 @@
 [package]
 name = "leetcode_for_rust"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Caitlin Gao <caitlin.gaoo@google.com>"]
 homepage = "https://github.com/caitlingao/leetcode_rust"
 repository = "https://github.com/caitlingao/leetcode_rust"
@@ -14,6 +14,7 @@ include = [
     "README.md",
     "src/lib.rs",
     "src/two_sum/mod.rs",
+    "src/reverse_linked_list/mod.rs",
 ]
 
 [lib]
