@@ -71,7 +71,7 @@ use std::collections::HashMap;
 ///
 ///         for s1 in s.chars() {
 ///             if str_map.contains_key(&s1) {
-///                 if !(v.pop() == Some(str_map[&s1])) {
+///                 if v.pop() != Some(str_map[&s1]) {
 ///                     return false;
 ///                 }
 ///             } else {
@@ -93,7 +93,7 @@ pub fn is_valid(s: String) -> bool {
 
     for s1 in s.chars() {
         if str_map.contains_key(&s1) {
-            if !(v.pop() == Some(str_map[&s1])) {
+            if v.pop() != Some(str_map[&s1]) {
                 return false;
             }
         } else {
@@ -102,4 +102,64 @@ pub fn is_valid(s: String) -> bool {
     }
 
     v.is_empty()
+}
+
+/// # Solutions
+///
+/// # Approach 1: Stacks
+///
+/// * Time complexity: O(n)
+///
+/// * Space complexity: O(n)
+///
+/// ```rust
+/// use std::collections::HashMap;
+///
+/// impl Solution {
+///     pub fn is_valid2(s: String) -> bool {
+///         let mut paren_stack = vec![];
+///         let mut paren_map: HashMap<char, char> = HashMap::new();
+///         paren_map.insert(')', '(');
+///         paren_map.insert('}', '{');
+///         paren_map.insert(']', '[');
+///
+///         for ch in s.chars() {
+///             match ch {
+///                 '(' | '{' | '[' => paren_stack.push(ch),
+///                 _ => {
+///                     let expected = *paren_map.get(&ch).unwrap();
+///                     let actual = paren_stack.pop().unwrap();
+///                     if expected != actual {
+///                         return false;
+///                     }
+///                 }
+///             }
+///         }
+///
+///         paren_stack.is_empty()
+///     }
+/// }
+/// ```
+///
+pub fn is_valid2(s: String) -> bool {
+    let mut paren_stack = vec![];
+    let mut paren_map: HashMap<char, char> = HashMap::new();
+    paren_map.insert(')', '(');
+    paren_map.insert('}', '{');
+    paren_map.insert(']', '[');
+
+    for ch in s.chars() {
+        match ch {
+            '(' | '{' | '[' => paren_stack.push(ch),
+            _ => {
+                let expected = *paren_map.get(&ch).unwrap();
+                let actual = paren_stack.pop().unwrap();
+                if expected != actual {
+                    return false;
+                }
+            }
+        }
+    }
+
+    paren_stack.is_empty()
 }
