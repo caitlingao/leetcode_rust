@@ -1,4 +1,4 @@
-//!  Implement Queue using Stacks [leetcode: implement_queue_using_stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+//! Implement Queue using Stacks [leetcode: implement_queue_using_stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 //!
 //! Implement the following operations of a queue using stacks.
 //! * push(x) -- Push element x to the back of queue.
