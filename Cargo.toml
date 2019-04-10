@@ -14,6 +14,7 @@ include = [
     "README.md",
     "src/lib.rs",
     "src/cd01_two_sum/mod.rs",
+    "src/cd15_three_sum/mod.rs",
     "src/cd20_valid_parentheses/mod.rs",
     "src/cd206_reverse_linked_list/mod.rs",
     "src/cd232_implement_queue_using_stacks/mod.rs",
