@@ -18,6 +18,7 @@ include = [
     "src/cd0020_valid_parentheses/mod.rs",
     "src/cd0050_powx_n/mod.rs",
     "src/cd0098_validate_binary_search_tree/mod.rs",
+    "src/cd0169_majority_element/mod.rs",
     "src/cd0206_reverse_linked_list/mod.rs",
     "src/cd0232_implement_queue_using_stacks/mod.rs",
     "src/cd0239_sliding_window_maximum/mod.rs",

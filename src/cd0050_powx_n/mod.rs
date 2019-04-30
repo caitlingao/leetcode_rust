@@ -42,7 +42,7 @@
 ///
 /// ```rust
 /// impl Solution {
-///     pub fn my_pow(mut x: f64, n: i32) -> f64 {
+///     pub fn my_pow(x: f64, n: i32) -> f64 {
 ///         let mut ln = n as i64;
 ///         let mut pow = 1f64;
 ///         let mut current = x;
