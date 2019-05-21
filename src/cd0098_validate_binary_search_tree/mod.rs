@@ -160,6 +160,7 @@ use std::cell::RefCell;
 ///        true
 ///     }
 /// }
+/// ```
 ///
 pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
     fn valid(node: &Option<Rc<RefCell<TreeNode>>>, min_limit: Option<i32>, max_limit: Option<i32>) -> bool {
