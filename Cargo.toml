@@ -19,6 +19,7 @@ include = [
     "src/cd0050_powx_n/mod.rs",
     "src/cd0098_validate_binary_search_tree/mod.rs",
     "src/cd0102_binary_tree_level_order_traversal/mod.rs",
+    "src/cd0104_maximum_depth_of_binary_tree/mod.rs",
     "src/cd0122_best_time_to_buy_and_sell_stock_ii/mod.rs",
     "src/cd0169_majority_element/mod.rs",
     "src/cd0206_reverse_linked_list/mod.rs",

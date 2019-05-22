@@ -4,6 +4,7 @@ pub mod cd0020_valid_parentheses;
 pub mod cd0050_powx_n;
 pub mod cd0098_validate_binary_search_tree;
 pub mod cd0102_binary_tree_level_order_traversal;
+pub mod cd0104_maximum_depth_of_binary_tree;
 pub mod cd0122_best_time_to_buy_and_sell_stock_ii;
 pub mod cd0169_majority_element;
 pub mod cd0206_reverse_linked_list;

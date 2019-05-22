@@ -71,7 +71,7 @@ use std::collections::VecDeque;
 ///             let mut added = false;
 ///             let level_size = deque.len();
 ///
-///             for i in 0..level_size {
+///             for _i in 0..level_size {
 ///                 let n = deque.pop_front();
 ///                 if let Some(Some(node)) = n {
 ///                     current_level.push(node.borrow().val);
@@ -155,7 +155,7 @@ pub fn level_order(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<Vec<i32>> {
         let mut added = false;
         let level_size = deque.len();
 
-        for i in 0..level_size {
+        for _i in 0..level_size {
             let n = deque.pop_front();
             if let Some(Some(node)) = n {
                 current_level.push(node.borrow().val);
