@@ -1,8 +1,8 @@
-//! Maximum Depth of Binary Tree[leetcode: maximum_depth_of_binary_tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+//! Minimum Depth of Binary Tree[leetcode: minimum_depth_of_binary_tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 //!
-//! Given a binary tree, find its maximum depth.
+//! Given a binary tree, find its minimum depth.
 //!
-//! The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+//!The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
 //!
 //! **Note:** A leaf is a node with no children.
 //!
@@ -16,7 +16,7 @@
 //!     /  \
 //!    15   7
 //! ```
-//! return its depth = 3.
+//! return its depth = 2.
 
 use std::rc::Rc;
 use std::cell::RefCell;
@@ -29,7 +29,7 @@ use std::cmp::Ord;
 ///
 /// * Space complexity: O(1)
 ///
-/// * Runtime: 4 ms
+/// * Runtime: 0 ms
 ///
 /// * Memory: 3.1 MB
 ///
@@ -56,13 +56,17 @@ use std::cmp::Ord;
 /// use std::cell::RefCell;
 /// use std::cmp::Ord;
 /// impl Solution {
-///     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+///     pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
 ///         match root {
 ///             Some(node) => {
-///                 let left = Self::max_depth(node.borrow().left.clone());
-///                 let right = Self::max_depth(node.borrow().right.clone());
+///                 let left = Self::min_depth(node.borrow().left.clone());
+///                 let right = Self::min_depth(node.borrow().right.clone());
 ///
-///                 1 + left.max(right)
+///                 if left == 0 || right == 0 {
+///                     1 + left + right
+///                 } else {
+///                     1 + left.min(right)
+///                 }
 ///             },
 ///             _ => 0,
 ///         }
@@ -103,22 +107,24 @@ use std::cmp::Ord;
 /// use std::cell::RefCell;
 /// use std::collections::VecDeque;
 /// impl Solution {
-///     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+///     pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
 ///         if root.is_none() { return 0; }
 ///
-///         let mut depth = 0;
 ///         let mut deque: VecDeque<Option<Rc<RefCell<TreeNode>>>> = VecDeque::new();
+///         let mut depth = 0;
 ///         deque.push_back(root);
 ///
 ///         while !deque.is_empty() {
-///             let level_size = deque.len();
-///             let mut added = false;
 ///             depth += 1;
+///             let mut added = false;
+///             let level_size = deque.len();
+///
 ///             for _i in 0..level_size {
 ///                 let n = deque.pop_front();
-///                 added = true;
-///                 if let Some(Some(node)) = n {
-///                     if node.borrow().left.is_some() { deque.push_back(node.borrow().left.clone());}
+///                 if let(Some(Some(node))) = n {
+///                     added = true;
+///                     if node.borrow().left.is_none() && node.borrow().right.is_none() { return depth; }
+///                     if node.borrow().left.is_some() { deque.push_back(node.borrow().left.clone()); }
 ///                     if node.borrow().right.is_some() { deque.push_back(node.borrow().right.clone());}
 ///                 }
 ///             }
@@ -129,13 +135,17 @@ use std::cmp::Ord;
 /// }
 /// ```
 ///
-pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
     match root {
         Some(node) => {
-            let left = max_depth(node.borrow().left.clone());
-            let right = max_depth(node.borrow().right.clone());
+            let left = min_depth(node.borrow().left.clone());
+            let right = min_depth(node.borrow().right.clone());
 
-            1 + left.max(right)
+            if left == 0 || right == 0 {
+                1 + left + right
+            } else {
+                1 + left.min(right)
+            }
         },
         _ => 0,
     }
