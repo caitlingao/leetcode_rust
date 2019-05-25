@@ -3,6 +3,7 @@ pub mod cd0015_three_sum;
 pub mod cd0020_valid_parentheses;
 pub mod cd0022_generate_parentheses;
 pub mod cd0050_powx_n;
+pub mod cd0051_n_queens;
 pub mod cd0098_validate_binary_search_tree;
 pub mod cd0102_binary_tree_level_order_traversal;
 pub mod cd0104_maximum_depth_of_binary_tree;
