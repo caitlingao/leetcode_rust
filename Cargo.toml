@@ -17,6 +17,7 @@ include = [
     "src/cd0015_three_sum/mod.rs",
     "src/cd0020_valid_parentheses/mod.rs",
     "src/cd0022_generate_parentheses/mod.rs",
+    "src/cd0037_sudoku_solver/mod.rs",
     "src/cd0050_powx_n/mod.rs",
     "src/cd0051_n_queens/mod.rs",
     "src/cd0052_n_queens_ii/mod.rs",
