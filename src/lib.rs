@@ -2,6 +2,7 @@ pub mod cd0001_two_sum;
 pub mod cd0015_three_sum;
 pub mod cd0020_valid_parentheses;
 pub mod cd0022_generate_parentheses;
+pub mod cd0036_valid_sudoku;
 pub mod cd0037_sudoku_solver;
 pub mod cd0050_powx_n;
 pub mod cd0051_n_queens;

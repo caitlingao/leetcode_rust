@@ -1,6 +1,6 @@
 [package]
 name = "leetcode_for_rust"
-version = "0.1.3"
+version = "0.1.30"
 authors = ["Caitlin Gao <caitlin.gaoo@google.com>"]
 homepage = "https://github.com/caitlingao/leetcode_rust"
 repository = "https://github.com/caitlingao/leetcode_rust"
@@ -17,6 +17,7 @@ include = [
     "src/cd0015_three_sum/mod.rs",
     "src/cd0020_valid_parentheses/mod.rs",
     "src/cd0022_generate_parentheses/mod.rs",
+    "src/cd0036_valid_sudoku/mod.rs",
     "src/cd0037_sudoku_solver/mod.rs",
     "src/cd0050_powx_n/mod.rs",
     "src/cd0051_n_queens/mod.rs",
