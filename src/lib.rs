@@ -18,4 +18,5 @@ pub mod cd0206_reverse_linked_list;
 pub mod cd0232_implement_queue_using_stacks;
 pub mod cd0239_sliding_window_maximum;
 pub mod cd0242_valid_anagram;
+pub mod cd0367_valid_perfect_square;
 pub mod cd0703_kth_largest_element_in_a_stream;
