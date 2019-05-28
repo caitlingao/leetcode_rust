@@ -22,6 +22,7 @@ include = [
     "src/cd0050_powx_n/mod.rs",
     "src/cd0051_n_queens/mod.rs",
     "src/cd0052_n_queens_ii/mod.rs",
+    "src/cd0069_sqrtx/mod.rs",
     "src/cd0098_validate_binary_search_tree/mod.rs",
     "src/cd0102_binary_tree_level_order_traversal/mod.rs",
     "src/cd0104_maximum_depth_of_binary_tree/mod.rs",
