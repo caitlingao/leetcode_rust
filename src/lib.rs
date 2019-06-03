@@ -16,6 +16,7 @@ pub mod cd0122_best_time_to_buy_and_sell_stock_ii;
 pub mod cd0169_majority_element;
 pub mod cd0206_reverse_linked_list;
 pub mod cd0208_implement_trie_prefix_tree;
+pub mod cd0212_word_search_ii;
 pub mod cd0232_implement_queue_using_stacks;
 pub mod cd0239_sliding_window_maximum;
 pub mod cd0242_valid_anagram;

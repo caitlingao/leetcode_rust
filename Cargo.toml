@@ -31,6 +31,7 @@ include = [
     "src/cd0169_majority_element/mod.rs",
     "src/cd0206_reverse_linked_list/mod.rs",
     "src/cd0208_implement_trie_prefix_tree/mod.rs",
+    "src/cd0212_word_search_ii/mod.rs",
     "src/cd0232_implement_queue_using_stacks/mod.rs",
     "src/cd0239_sliding_window_maximum/mod.rs",
     "src/cd0242_valid_anagram/mod.rs",
