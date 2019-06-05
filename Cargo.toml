@@ -30,6 +30,7 @@ include = [
     "src/cd0111_minimum_depth_of_binary_tree/mod.rs",
     "src/cd0122_best_time_to_buy_and_sell_stock_ii/mod.rs",
     "src/cd0169_majority_element/mod.rs",
+    "src/cd0191_number_of_bits/mod.rs",
     "src/cd0206_reverse_linked_list/mod.rs",
     "src/cd0208_implement_trie_prefix_tree/mod.rs",
     "src/cd0212_word_search_ii/mod.rs",
