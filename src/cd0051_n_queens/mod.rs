@@ -57,7 +57,15 @@
 ///         result
 ///     }
 ///
-///     pub fn _dfs(n: i32, result: &mut Vec<Vec<String>>, current_queens: &mut Vec<i32>, row: i32, cols: &mut Vec<i32>, xy_sum: &mut Vec<i32>, xy_sub: &mut Vec<i32>) {
+///     pub fn _dfs(
+///                 n:              i32,
+///                 result:         &mut Vec<Vec<String>>,
+///                 current_queens: &mut Vec<i32>,
+///                 row:            i32,
+///                 cols:           &mut Vec<i32>,
+///                 xy_sum:         &mut Vec<i32>,
+///                 xy_sub:         &mut Vec<i32>
+///                ) {
 ///         if row >= n {
 ///             result.push(Self::matrix(current_queens, n));
 ///             return;
@@ -144,6 +152,54 @@
 ///         false
 ///     }
 /// }
+/// ```
+///
+/// # Approach 3: BitWies
+///
+/// * Time complexity:
+///
+/// * Space complexity:
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.8 MB
+///
+/// ```rust
+/// impl Solution {
+///     pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {
+///         if n < 1 { return vec! []; }
+///
+///         let mut board = vec![vec!['.'; n as usize]; n as usize];
+///         let mut result = vec![];
+///         Self::_dfs(&mut board, &mut result, n, 0, 0, 0, 0);
+///         result
+///     }
+///     pub fn _dfs(
+///                 board:  &mut Vec<Vec<char>>,
+///                 result: &mut Vec<Vec<String>>,
+///                 n:      i32,
+///                 row:    i32,
+///                 col:    i32,
+///                 xy_sum: i32,
+///                 xy_sub: i32
+///                 ) {
+///         if row >= n {
+///             result.push(board.iter().map(|vec| vec.iter().collect()).collect());
+///             return;
+///         }
+///
+///         // bits = 2^t0 + 2^t1 + 2^t2 + ... (t0 < t1 < t2 < ...)
+///         let mut bits = (!(col | xy_sum | xy_sub)) & ((1 << n) - 1);
+///         while bits != 0 {
+///             // p = 2^t0, so log2(p) = t0, t0 is the position to puts Q
+///             let p = bits & -bits;
+///             board[row as usize][((p as f32).log2()) as usize] = 'Q'; // puts Q in board[row][t0]
+///             Self::_dfs(board, result, n, row + 1, col | p, (xy_sum | p) << 1, (xy_sub | p) >> 1); // row + 1 and next recursion
+///             board[row as usize][((p as f32).log2())as usize] = '.';
+///             bits = bits & (bits - 1);
+///         }
+///     }
+/// }
+/// ```
 ///
 
 pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {
