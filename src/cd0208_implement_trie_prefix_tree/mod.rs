@@ -146,46 +146,4 @@
 /// ```
 #[derive(Default)]
 pub struct Trie {
-    is_end: bool,
-    nodes: [Option<Box<Trie>>; 26],
-}
-impl Trie {
-
-    /** Initialize your data structure here. */
-    fn new() -> Self {
-        Default::default()
-    }
-
-    /** Inserts a word into the trie. */
-    fn insert(&mut self, word: String) {
-       let mut curr = self;
-        for i in word.chars().map(|char| (char as u8 - 'a' as u8) as usize) {
-            curr = curr.nodes[i].get_or_insert_with(|| Box::new(Trie::new()));
-        }
-        curr.is_end = true;
-    }
-
-    /** Returns if the word is in the trie. */
-    fn search(&self, word: String) -> bool {
-       let mut curr = self;
-        for i in word.chars().map(|char| (char as u8 - 'a' as u8) as usize) {
-            match curr.nodes[i].as_ref() {
-                Some(node) => { curr = node; },
-                None => { return false; },
-            }
-        }
-        curr.is_end
-    }
-
-    /** Returns if there is any word in the trie that starts with the given prefix. */
-    fn starts_with(&self, prefix: String) -> bool {
-       let mut curr = self;
-        for i in prefix.chars().map(|char| (char as u8 - 'a' as u8) as usize) {
-            match curr.nodes[i].as_ref() {
-                Some(node) => { curr = node; },
-                None => { return false; },
-            }
-        }
-        true
-    }
 }

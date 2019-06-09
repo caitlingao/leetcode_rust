@@ -136,9 +136,8 @@ pub fn _dfs(board:  &mut Vec<Vec<char>>,
             row:    usize,
             col:    usize,
             trie:   &Trie) {
-    let mut curr = trie;
     if let Some(node) = trie.nodes[(board[row][col] as u8 - 'a' as u8) as usize].as_ref() {
-        curr = node;
+        let curr = node;
         s.push(board[row][col]);
         if curr.is_end { result.insert(s.clone()); }
         for d in DIRS.iter() {

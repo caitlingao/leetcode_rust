@@ -118,7 +118,7 @@
 /// }
 /// ```
 ///
-pub fn exist(mut board: Vec<Vec<char>>, word: String) -> bool {
+pub fn exist(board: Vec<Vec<char>>, word: String) -> bool {
     if board.is_empty() || board[0].is_empty() { return false; }
     if word.is_empty() { return true; }
 
