@@ -200,6 +200,8 @@
 ///     }
 /// }
 /// ```
+/// Reference
+/// * [LeetCode51](http://www.voidcn.com/article/p-wsavmpbh-bpn.html)
 ///
 
 pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {

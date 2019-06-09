@@ -164,9 +164,10 @@
 ///        }
 ///    }
 ///
-///
 /// ```
-///
+/// Reference
+/// * [LeetCode52](https://lichangke.github.io/2019/04/18/LeetCode-52-N%E7%9A%87%E5%90%8E-II(N-Queens-II)/)
+/// * [LeetCode52](https://www.cnblogs.com/albert1017/archive/2013/01/15/2860973.html)
 
 pub fn total_n_queens(n: i32) -> i32 {
     if n < 1 { return 0; }
