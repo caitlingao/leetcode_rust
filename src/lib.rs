@@ -15,6 +15,7 @@ pub mod cd0102_binary_tree_level_order_traversal;
 pub mod cd0104_maximum_depth_of_binary_tree;
 pub mod cd0111_minimum_depth_of_binary_tree;
 pub mod cd0120_triangle;
+pub mod cd0121_best_time_to_buy_and_sell_stock;
 pub mod cd0122_best_time_to_buy_and_sell_stock_ii;
 pub mod cd0152_maximum_product_subarray;
 pub mod cd0169_majority_element;
