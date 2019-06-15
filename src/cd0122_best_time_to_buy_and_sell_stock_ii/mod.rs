@@ -58,6 +58,121 @@
 /// }
 /// ```
 ///
+/// # Approach 2: Iteration
+///
+/// * Time complexity: O(0)
+///
+/// * Space complexity: O(1)
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.6 MB
+///
+/// ```rust
+/// use std::cmp::max;
+///
+/// impl Solution {
+///     pub fn max_profit(prices: Vec<i32>) -> i32 {
+///         if prices.len() <= 1 { return 0; }
+///
+///         let mut max_profit = 0;
+///         for i in 1..prices.len() {
+///             max_profit += max(0, prices[i] - prices[i - 1]);
+///         }
+///         max_profit
+///     }
+/// }
+/// ```
+///
+/// # Approach 3: Dynamic Programming
+///
+/// * Time complexity: O(0)
+///
+/// * Space complexity: O(1)
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.6 MB
+///
+/// ```rust
+/// use std::cmp;
+///
+/// impl Solution {
+///     pub fn max_profit(prices: Vec<i32>) -> i32 {
+///         if prices.len() < 2 { return 0; }
+///
+///         let mut result  = 0;
+///         let mut profits = vec![vec![0; 3]; prices.len()];
+///         profits[0][1] = -prices[0];
+///
+///         for i in 1..prices.len() {
+///             profits[i][0] = profits[i - 1][0];
+///             profits[i][1] = cmp::max(profits[i - 1][1], profits[i - 1][0] - prices[i]);
+///             profits[i][2] = profits[i - 1][1] + prices[i];
+///
+///             result = cmp::max(result, cmp::max(profits[i][0], cmp::max(profits[i][1], profits[i][2])));
+///         }
+///         result
+///     }
+/// }
+/// ```
+///
+/// # Approach 4: Dynamic Programming
+///
+/// * Time complexity: O(0)
+///
+/// * Space complexity: O(1)
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.6 MB
+///
+/// ```rust
+/// impl Solution {
+///     pub fn max_profit(prices: Vec<i32>) -> i32 {
+///         if prices.len() < 2 { return 0; }
+///
+///         let mut profits = vec![0; prices.len()];
+///         profits[0] = -prices[0];
+///         for i in 1..prices.len() {
+///             if profits[i - 1] < 0 { profits[ i - 1] = 0; }
+///
+///             profits[i] = profits[i - 1] - prices[i - 1] + prices[i];
+///         }
+///
+///         profits.sort();
+///         *profits.last().unwrap()
+///     }
+/// }
+/// ```
+///
+/// # Approach 5: Dynamic Programming
+///
+/// * Time complexity: O(0)
+///
+/// * Space complexity: O(1)
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.6 MB
+///
+/// ```rust
+/// use std::cmp;
+///
+/// impl Solution {
+///     pub fn max_profit(prices: Vec<i32>) -> i32 {
+///         if prices.len() < 2 { return 0; }
+///
+///         let mut profits = vec![0; prices.len()];
+///         let mut max_profit = 0;
+///         let mut tmp_min = prices[0];
+///         for i in 1..prices.len() {
+///             profits[i] = cmp::max(profits[i - 1], prices[i] - tmp_min);
+///             tmp_min = cmp::min(tmp_min, prices[i]);
+///             max_profit = cmp::max(profits[i], max_profit);
+///         }
+///
+///         max_profit
+///     }
+/// }
+/// ```
+///
 pub fn max_profit(prices: Vec<i32>) -> i32 {
     if prices.len() <= 1 { return 0; }
 
