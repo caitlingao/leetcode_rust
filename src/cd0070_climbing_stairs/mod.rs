@@ -73,6 +73,32 @@
 /// }
 /// ```
 ///
+/// # Approach 3: Dynamic Programming
+///
+/// * Time complexity: O(2n)
+///
+/// * Space complexity: O(n)
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.5 MB
+///
+/// ```rust
+/// impl Solution {
+///     pub fn climb_stairs(n: i32) -> i32 {
+///         let steps = vec![1, 2];
+///         let mut dp = vec![0; (n + 1) as usize];
+///         dp[0] = 1;
+///
+///         for i in 1..=n as usize {
+///             for j in 0..steps.len() {
+///                 if i >= steps[j] { dp[i] += dp[i - steps[j]]; }
+///             }
+///         }
+///
+///         *dp.last().unwrap()
+///     }
+/// }
+/// ```
 pub fn climb_stairs(n: i32) -> i32 {
     match n {
         0 | 1 | 2 => n,
