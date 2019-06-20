@@ -24,6 +24,7 @@ include = [
     "src/cd0052_n_queens_ii/mod.rs",
     "src/cd0069_sqrtx/mod.rs",
     "src/cd0070_climbing_stairs/mod.rs",
+    "src/cd0072_edit_distance/mod.rs",
     "src/cd0079_word_search/mod.rs",
     "src/cd0098_validate_binary_search_tree/mod.rs",
     "src/cd0102_binary_tree_level_order_traversal/mod.rs",

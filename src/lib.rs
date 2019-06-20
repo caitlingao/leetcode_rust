@@ -9,6 +9,7 @@ pub mod cd0051_n_queens;
 pub mod cd0052_n_queens_ii;
 pub mod cd0069_sqrtx;
 pub mod cd0070_climbing_stairs;
+pub mod cd0072_edit_distance;
 pub mod cd0079_word_search;
 pub mod cd0098_validate_binary_search_tree;
 pub mod cd0102_binary_tree_level_order_traversal;
