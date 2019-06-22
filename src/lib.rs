@@ -23,6 +23,7 @@ pub mod cd0152_maximum_product_subarray;
 pub mod cd0169_majority_element;
 pub mod cd0188_best_time_to_buy_and_sell_stock_iv;
 pub mod cd0191_number_of_bits;
+pub mod cd0200_number_of_islands;
 pub mod cd0206_reverse_linked_list;
 pub mod cd0208_implement_trie_prefix_tree;
 pub mod cd0212_word_search_ii;
