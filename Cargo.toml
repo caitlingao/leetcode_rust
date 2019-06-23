@@ -51,6 +51,7 @@ include = [
     "src/cd0322_coin_change/mod.rs",
     "src/cd0338_counting_bits/mod.rs",
     "src/cd0367_valid_perfect_square/mod.rs",
+    "src/cd0547_friend_circles/mod.rs",
     "src/cd0703_kth_largest_element_in_a_stream/mod.rs",
     "src/cd0714_best_time_to_buy_and_sell_stock_with_transaction_fee/mod.rs",
 ]
