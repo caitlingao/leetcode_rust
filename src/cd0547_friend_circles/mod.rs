@@ -34,7 +34,6 @@
 //! 2. M[i][i] = 1 for all students.
 //! 3. If M[i][j] = 1, then M[j][i] = 1.
 
-
 /// # Solutions
 ///
 /// # Approach 1: Union Find
@@ -92,6 +91,46 @@
 ///             }
 ///         }
 ///         uf.count
+///     }
+/// }
+/// ```
+///
+/// # Solutions
+///
+/// # Approach 2: DFS
+///
+/// * Time complexity:
+///
+/// * Space complexity:
+///
+/// * Runtime: 0 ms
+/// * Memory: 2.7 MB
+///
+/// ```rust
+/// impl Solution {
+///     pub fn find_circle_num(m: Vec<Vec<i32>>) -> i32 {
+///         if m.is_empty() { return 0; }
+///
+///         let n = m.len();
+///         let mut visited: Vec<i32> = vec![];
+///         let mut count = 0;
+///
+///         for i in 0..n {
+///             if !visited.contains(&(i as i32)) {
+///                 Self::dfs(&m, &mut visited, i, n);
+///                 count += 1;
+///             }
+///         }
+///         count
+///     }
+///
+///     pub fn dfs(m: &Vec<Vec<i32>>, visited: &mut Vec<i32>, i: usize, n: usize) {
+///         for j in 0..n {
+///             if m[i][j] == 1 && !visited.contains(&(j as i32)) {
+///                 visited.push(j as i32);
+///                 Self::dfs(m, visited, j, n);
+///             }
+///         }
 ///     }
 /// }
 /// ```
