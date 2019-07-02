@@ -3,6 +3,7 @@ pub mod cd0015_three_sum;
 pub mod cd0019_remove_nth_node_from_end_of_list;
 pub mod cd0020_valid_parentheses;
 pub mod cd0022_generate_parentheses;
+pub mod cd0024_swap_nodes_in_pairs;
 pub mod cd0036_valid_sudoku;
 pub mod cd0037_sudoku_solver;
 pub mod cd0050_powx_n;
