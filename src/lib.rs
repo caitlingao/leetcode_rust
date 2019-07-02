@@ -1,5 +1,6 @@
 pub mod cd0001_two_sum;
 pub mod cd0015_three_sum;
+pub mod cd0019_remove_nth_node_from_end_of_list;
 pub mod cd0020_valid_parentheses;
 pub mod cd0022_generate_parentheses;
 pub mod cd0036_valid_sudoku;
