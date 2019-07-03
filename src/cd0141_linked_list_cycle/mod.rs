@@ -94,6 +94,51 @@ use std::collections::HashSet;
 /// }
 /// ```
 ///
+/// # Approach 2: Fast and Slow Pointer
+///
+/// * Time complexity: O(n)
+///
+/// * Space complexity: O(1)
+///
+/// * Runtime: 0ms
+///
+/// Memory: 2.4MB
+///
+/// ```rust
+///
+/// // Definition for singly-linked list.
+/// // #[derive(Hash, Eq, PartialEq, Debug, Clone)]
+/// // pub struct ListNode {
+/// //   pub val: i32,
+/// //   pub next: Option<Box<ListNode>>
+/// // }
+/// //
+/// // impl ListNode {
+/// //   #[inline]
+/// //   fn new(val: i32) -> Self {
+/// //     ListNode {
+/// //       next: None,
+/// //       val
+/// //     }
+/// //   }
+/// // }
+///
+/// impl Solution {
+///     pub fn has_cycle(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+///         let mut fast_p = &head;
+///         let mut slow_p = &head;
+///
+///         while fast_p.is_some() && fast_p.as_ref().unwrap().next.is_some() {
+///             slow_p = &slow_p.as_ref().unwrap().next;
+///             fast_p = &fast_p.as_ref().unwrap().next.as_ref().unwrap().next;
+///
+///             if slow_p == fast_p { return true; }
+///         }
+///         false
+///     }
+/// }
+/// ```
+///
 pub fn has_cycle(mut head: Option<Box<ListNode>>) -> bool {
     let mut vikings = HashSet::new();
     let mut cur = &mut head;
