@@ -17,6 +17,7 @@ include = [
     "src/cd0015_three_sum/mod.rs",
     "src/cd0019_remove_nth_node_from_end_of_list/mod.rs",
     "src/cd0020_valid_parentheses/mod.rs",
+    "src/cd0021_merge_two_sorted_lists/mod.rs",
     "src/cd0022_generate_parentheses/mod.rs",
     "src/cd0024_swap_nodes_in_pairs/mod.rs",
     "src/cd0025_reverse_nodes_in_k_group/mod.rs",
