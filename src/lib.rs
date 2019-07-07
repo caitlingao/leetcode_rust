@@ -25,6 +25,7 @@ pub mod cd0122_best_time_to_buy_and_sell_stock_ii;
 pub mod cd0123_best_time_to_buy_and_sell_stock_iii;
 pub mod cd0141_linked_list_cycle;
 pub mod cd0152_maximum_product_subarray;
+pub mod cd0155_min_stack;
 pub mod cd0169_majority_element;
 pub mod cd0188_best_time_to_buy_and_sell_stock_iv;
 pub mod cd0191_number_of_bits;
