@@ -84,6 +84,35 @@ use std::collections::HashMap;
 /// }
 /// ```
 ///
+/// # Approach 2: Stacks
+///
+/// * Time complexity: O(n)
+///
+/// * Space complexity: O(n)
+///
+/// ```rust
+/// impl Solution {
+///     pub fn is_valid(s: String) -> bool {
+///         let mut stack = vec![];
+///         for c in s.chars() {
+///             match c {
+///                 '(' => stack.push(')'),
+///                 '{' => stack.push('}'),
+///                 '[' => stack.push(']'),
+///                 ')' | '}' | ']' => {
+///                     match stack.pop() {
+///                         None => return false,
+///                         Some(ch) => { if ch != c { return false; }},
+///                     }
+///                 },
+///                 _ => {},
+///             }
+///         }
+///         stack.is_empty()
+///     }
+/// }
+/// ```
+///
 pub fn is_valid(s: String) -> bool {
     let mut v = vec![];
     let mut str_map: HashMap<char, char> = HashMap::new();
