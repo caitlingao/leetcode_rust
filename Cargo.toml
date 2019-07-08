@@ -57,6 +57,7 @@ include = [
     "src/cd0322_coin_change/mod.rs",
     "src/cd0338_counting_bits/mod.rs",
     "src/cd0367_valid_perfect_square/mod.rs",
+    "src/cd0496_next_greater_element_i/mod.rs",
     "src/cd0547_friend_circles/mod.rs",
     "src/cd0682_baseball_game/mod.rs",
     "src/cd0703_kth_largest_element_in_a_stream/mod.rs",
