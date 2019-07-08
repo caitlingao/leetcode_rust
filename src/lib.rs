@@ -33,6 +33,7 @@ pub mod cd0200_number_of_islands;
 pub mod cd0206_reverse_linked_list;
 pub mod cd0208_implement_trie_prefix_tree;
 pub mod cd0212_word_search_ii;
+pub mod cd0224_basic_calculator;
 pub mod cd0231_power_of_two;
 pub mod cd0232_implement_queue_using_stacks;
 pub mod cd0239_sliding_window_maximum;
