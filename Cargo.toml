@@ -65,6 +65,7 @@ include = [
     "src/cd0714_best_time_to_buy_and_sell_stock_with_transaction_fee/mod.rs",
     "src/cd0844_backspace_string_compare/mod.rs",
     "src/cd0876_middle_of_the_linked_list/mod.rs",
+    "src/cd0933_number_of_recent_calls/mod.rs",
 ]
 
 [lib]
