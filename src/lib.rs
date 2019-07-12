@@ -46,6 +46,7 @@ pub mod cd0367_valid_perfect_square;
 pub mod cd0496_next_greater_element_i;
 pub mod cd0547_friend_circles;
 pub mod cd0622_design_circular_queue;
+pub mod cd0641_design_circular_deque;
 pub mod cd0682_baseball_game;
 pub mod cd0703_kth_largest_element_in_a_stream;
 pub mod cd0714_best_time_to_buy_and_sell_stock_with_transaction_fee;
