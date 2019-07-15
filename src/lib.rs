@@ -1,4 +1,5 @@
 pub mod cd0001_two_sum;
+pub mod cd0002_add_two_numbers;
 pub mod cd0015_three_sum;
 pub mod cd0019_remove_nth_node_from_end_of_list;
 pub mod cd0020_valid_parentheses;
