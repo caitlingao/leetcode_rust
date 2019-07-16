@@ -15,6 +15,7 @@ include = [
     "src/lib.rs",
     "src/cd0001_two_sum/mod.rs",
     "src/cd0002_add_two_numbers/mod.rs",
+    "src/cd0003_longest_substring_without_repeating_characters/mod.rs",
     "src/cd0015_three_sum/mod.rs",
     "src/cd0019_remove_nth_node_from_end_of_list/mod.rs",
     "src/cd0020_valid_parentheses/mod.rs",
