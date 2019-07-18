@@ -8,6 +8,7 @@ pub mod cd0021_merge_two_sorted_lists;
 pub mod cd0022_generate_parentheses;
 pub mod cd0024_swap_nodes_in_pairs;
 pub mod cd0025_reverse_nodes_in_k_group;
+pub mod cd0033_search_in_rotated_sorted_array;
 pub mod cd0036_valid_sudoku;
 pub mod cd0037_sudoku_solver;
 pub mod cd0050_powx_n;
