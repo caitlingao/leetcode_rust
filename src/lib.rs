@@ -19,6 +19,7 @@ pub mod cd0069_sqrtx;
 pub mod cd0070_climbing_stairs;
 pub mod cd0072_edit_distance;
 pub mod cd0079_word_search;
+pub mod cd0094_binary_tree_inorder_traversal;
 pub mod cd0098_validate_binary_search_tree;
 pub mod cd0102_binary_tree_level_order_traversal;
 pub mod cd0104_maximum_depth_of_binary_tree;

@@ -34,6 +34,7 @@ include = [
     "src/cd0070_climbing_stairs/mod.rs",
     "src/cd0072_edit_distance/mod.rs",
     "src/cd0079_word_search/mod.rs",
+    "src/cd0094_binary_tree_inorder_traversal/mod.rs",
     "src/cd0098_validate_binary_search_tree/mod.rs",
     "src/cd0102_binary_tree_level_order_traversal/mod.rs",
     "src/cd0104_maximum_depth_of_binary_tree/mod.rs",
