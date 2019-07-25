@@ -56,6 +56,7 @@ pub mod cd0622_design_circular_queue;
 pub mod cd0641_design_circular_deque;
 pub mod cd0682_baseball_game;
 pub mod cd0700_search_in_a_binary_search_tree;
+pub mod cd0701_insert_into_a_binary_search_tree;
 pub mod cd0703_kth_largest_element_in_a_stream;
 pub mod cd0714_best_time_to_buy_and_sell_stock_with_transaction_fee;
 pub mod cd0844_backspace_string_compare;
