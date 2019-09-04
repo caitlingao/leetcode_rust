@@ -85,7 +85,7 @@ pub fn calculate(s: String) -> i32 {
     stack.push(sign);
     for ch in s.chars() {
         match ch {
-            '0'...'9' => {
+            '0'..='8' => {
                 operand = 10 * operand + (ch as u8 - '0' as u8) as i32;
             },
             '(' => {
