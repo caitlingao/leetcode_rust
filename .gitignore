@@ -6,3 +6,6 @@ Cargo.lock
 /debug
 /doc
 .rustc_info.json
+docker-compose.yml
+Dockerfile
+.dockerignore
