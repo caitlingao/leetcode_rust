@@ -18,6 +18,7 @@ include = [
     "src/cd0003_longest_substring_without_repeating_characters/mod.rs",
     "src/cd0004_median_of_two_sorted_arrays/mod.rs",
     "src/cd0005_longest-palindromic-substring/mod.rs",
+    "src/cd0006_zigzag-conversion/mod.rs",
     "src/cd0015_three_sum/mod.rs",
     "src/cd0019_remove_nth_node_from_end_of_list/mod.rs",
     "src/cd0020_valid_parentheses/mod.rs",
