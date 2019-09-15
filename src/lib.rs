@@ -4,6 +4,7 @@ pub mod cd0003_longest_substring_without_repeating_characters;
 pub mod cd0004_median_of_two_sorted_arrays;
 pub mod cd0005_longest_palindromic_substring;
 pub mod cd0006_zigzag_conversion;
+pub mod cd0007_reverse_integer;
 pub mod cd0015_three_sum;
 pub mod cd0019_remove_nth_node_from_end_of_list;
 pub mod cd0020_valid_parentheses;
